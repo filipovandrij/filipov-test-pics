@@ -1,8 +1,17 @@
 .form_container {
+    position: relative;
     margin: 20px 110px;
     display: flex;
     justify-content: center;
     align-items: center;
+    .error_message {
+        position: absolute;
+        top: 10px;
+        left: 40%;
+        color: red;
+        font-size: 20px;
+        border: 1px solid red;
+    }
 }
 .inner_form_container {
     position: relative;
