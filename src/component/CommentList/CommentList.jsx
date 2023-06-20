@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
-import './CommentList.scss'
+import './commentList.scss'
 import CommentComponent from '../CommentComponent/CommentComponent'
 import { fetchComments } from '../../store/commentSlice'
 
