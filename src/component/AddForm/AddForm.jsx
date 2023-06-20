@@ -1,4 +1,4 @@
-import './AddForm.scss'
+import './addForm.scss'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { addComment } from '../../store/commentSlice'
