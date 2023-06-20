@@ -1,0 +1,24 @@
+.form_container {
+    margin: 20px 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_form_container {
+    position: relative;
+    width: 100%;
+    textarea {
+        width: 100%;
+    }
+
+    .add_button {
+        position: absolute;
+        bottom: -10px;
+        right: -12px;
+        width: 60px;
+        height: 28px;
+        border: none;
+        color: white;
+        background-color: #5a2424;
+    }
+}

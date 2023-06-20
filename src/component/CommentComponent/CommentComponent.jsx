@@ -1,6 +1,14 @@
 import './CommentComponent.scss'
+import { useDispatch } from 'react-redux'
+import { deleteComment } from '../../store/commentSlice'
 
-const CommentComponent = ({ body, user }) => {
+const CommentComponent = ({ id, body, user }) => {
+    const dispatch = useDispatch()
+
+    const handleDelete = () => {
+        dispatch(deleteComment(id))
+    }
+
     const names = user.username.split(' ')
     let initials = ''
 
@@ -15,7 +23,9 @@ const CommentComponent = ({ body, user }) => {
                 {user.username}
                 <div className="logo_name">{initials}</div>
             </div>
-            <button className="delete">X</button>
+            <button className="delete" onClick={handleDelete}>
+                X
+            </button>
         </li>
     )
 }
