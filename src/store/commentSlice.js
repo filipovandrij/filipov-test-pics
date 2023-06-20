@@ -28,16 +28,17 @@ const commentSlice = createSlice({
         status: null,
         error: null,
     },
-    extraReducers: {
-        [fetchComments.pending]: (state) => {
-            state.status = 'loading'
-            state.error = null
-        },
-        [fetchComments.fulfilled]: (state, action) => {
-            state.status = 'resolve'
-            state.comments = action.payload
-        },
-        [fetchComments.rejected]: setError,
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchComments.pending, (state) => {
+                state.status = 'loading'
+                state.error = null
+            })
+            .addCase(fetchComments.fulfilled, (state, action) => {
+                state.status = 'fulfilled'
+                state.comments = action.payload
+            })
+            .addCase(fetchComments.rejected, setError)
     },
 })
 
